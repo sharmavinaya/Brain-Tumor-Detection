@@ -96,6 +96,7 @@ The model consists of a custom **4-layer Convolutional Neural Network** with:
 This project is licensed under the MIT License.
 
 ---
+For the trained model mail me at svinayak670@gmail.com as the model is a  large  file it cannot upload to the github
 
 ## 👨‍💻 Author
 
