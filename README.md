@@ -48,20 +48,6 @@ The model consists of a custom **4-layer Convolutional Neural Network** with:
 
 ---
 
-## 📂 Dataset
-
-The model is trained using MRI brain scan images categorized into:
-
-- Tumor
-- No Tumor
-
-The dataset is split into:
-
-- Training Set
-- Validation Set
-- Testing Set
-
----
 
 ## 📊 Model Performance
 
@@ -70,8 +56,7 @@ The dataset is split into:
 | Model Type | Custom CNN |
 | CNN Layers | 4 |
 | Accuracy | **93%** |
-| Loss Function | Binary Crossentropy |
-| Optimizer | Adam |
+
 
 ---
 
@@ -79,10 +64,10 @@ The dataset is split into:
 
 | Input MRI | Prediction |
 |------------|------------|
-| MRI Scan | Tumor |
+| MRI Scan | Tumor(with type) |
 | MRI Scan | No Tumor |
 
-*(Add screenshots here)*
+
 
 ---
 
@@ -105,11 +90,6 @@ The dataset is split into:
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to fork the repository, create a feature branch, and submit a pull request.
-
----
 
 ## 📜 License
 
