@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Upload MRI | Brain Tumor Detection</title>
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="upload.css">
+
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header class="header">
+
+    <div class="logo">
+
+      <div class="logo-icon">
+        <img src="./images/logo.png" alt="Logo">
+      </div>
+
+      <div class="logo-text">
+        <h1>Brain Tumor</h1>
+        <span>Detection System</span>
+      </div>
+
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="features.html">Features</a>
+      <a href="#" class="active">Upload</a>
+    </nav>
+
+    <a href="#" class="btn">
+      AI Detection →
+    </a>
+
+  </header>
+
+  <!-- =========================
+       MAIN SECTION
+  ========================== -->
+
+  <section class="upload-section">
+
+    <div class="upload-container">
+
+      <!-- LEFT -->
+
+      <div class="left-panel">
+
+        <div class="tag">
+          AI MRI Detection
+        </div>
+
+        <h1>
+          Upload MRI &
+          <span>Generate Report</span>
+        </h1>
+
+        <!-- FORM -->
+
+        <form id="patientForm">
+
+          <!-- NAME -->
+
+          <div class="input-group">
+            <label>Patient Name</label>
+            <input type="text" id="patientName" placeholder="Enter patient name" required>
+          </div>
+
+          <!-- AGE -->
+
+          <div class="input-group">
+            <label>Age</label>
+            <input type="number" id="patientAge" placeholder="Enter age" required>
+          </div>
+
+          <!-- SEX -->
+
+          <div class="input-group">
+            <label>Gender</label>
+
+            <select id="patientGender" required>
+              <option value="">Select Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <!-- MRI -->
+
+          <div class="input-group">
+            <label>Upload MRI Scan</label>
+
+            <input type="file" id="mriImage" accept="image/*" required>
+          </div>
+
+          <!-- BUTTON -->
+
+          <button type="submit" id="submitBtn" class="detect-btn">
+            Run CNN Detection
+          </button>
+
+        </form>
+
+      </div>
+
+      <!-- RIGHT -->
+
+      <div class="right-panel">
+
+        <div class="report-card">
+
+          <div class="report-header">
+
+            <h2>Detection Report</h2>
+
+            <span class="status">
+              AI ANALYSIS
+            </span>
+
+          </div>
+
+          <!-- RESULT -->
+
+          <div class="report-content">
+
+            <div class="report-item">
+              <span>Patient Name</span>
+              <h3 id="reportName">-</h3>
+            </div>
+
+            <div class="report-item">
+              <span>Age</span>
+              <h3 id="reportAge">-</h3>
+            </div>
+
+            <div class="report-item">
+              <span>Gender</span>
+              <h3 id="reportGender">-</h3>
+            </div>
+
+            <div class="report-item">
+              <span>Detection Result</span>
+              <h3 id="reportResult">Waiting...</h3>
+            </div>
+
+            <div class="report-item">
+              <span>Confidence</span>
+              <h3 id="reportConfidence">-</h3>
+            </div>
+
+          </div>
+
+          <!-- IMAGE PREVIEW -->
+
+          <div class="preview-box">
+            <img id="previewImage" src="" alt="">
+          </div>
+
+          <!-- DOWNLOAD -->
+
+          <button class="download-btn" onclick="downloadPDF()">
+            Download PDF Report
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- JS -->
+  <script src="upload.js"></script>
+
+</body>
+</html>
